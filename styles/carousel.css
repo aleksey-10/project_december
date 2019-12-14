@@ -1,0 +1,151 @@
+/*.carousel {
+	background: url("C:/Users/Bagetoon/Desktop/Projects/Front-end/carousel/img/wallpaper0.jpg");
+	background-size: 100% 100%;
+	margin: auto;
+	/*width: 100%;
+	}*/
+
+.carousel-task {
+	border-top: 2px solid gray;
+	border-bottom: 2px solid gray;
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: center;
+}
+
+.carousel {
+	color: lightgray;
+	position: relative;
+	font-size: 28px;
+	text-align: center;
+
+	/*border-left: 2px solid gray;*/
+	/*max-width: 900px;*/
+	margin: auto;
+	width: 100%;
+}
+
+img {
+	display: block;
+	position: absolute;
+	margin: auto;
+	width: 100%;
+	top: 0;
+	opacity: 0;
+	transition: all 0.5s; 
+	z-index: 0;
+	object-fit: contain;
+}
+
+.appear {
+	opacity: 1;
+	position: static;
+	transition: all 0.5s; 
+}
+
+
+button {
+	border: none;
+   	background-color: transparent;
+}
+
+.circles{
+	display: flex;
+	justify-content: center;
+	color: inherit;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	min-width: 350px;
+}
+
+.current-circle {
+	background: lightgray !important;
+}
+
+.circle:empty{
+	/*border: 2px solid lightgray;*/
+	background: gray;
+	border-radius: 50%;
+	padding: 5px;
+	margin: 15px;
+	transition: all 0.2s;
+	cursor: pointer;
+}
+
+.circle:hover, .current-circle{
+	background: lightgray;
+	transform: scale(1.3);
+	transition: all 0.2s;
+}
+
+
+.angles {
+	/*display: inline-block;*/
+	z-index: 1;
+	position: absolute;
+	cursor: pointer;
+	height: 50px;
+	top: 0;
+	bottom: 0;
+	margin: auto 0;
+	padding: 0;
+   	font: inherit;
+   	color: gray;
+   	cursor: pointer;
+   	/*border: 1px double white;*/
+   	transition: color 0.2s;
+
+}
+
+.angles:hover {
+	transform: scale(1.3);
+	color: lightgray;
+	transition: all 0.2s;
+}
+
+.fa-angle-right {
+	right: 10px;
+	padding-left: 3px;
+}
+
+.fa-angle-left {
+
+   	padding-right: 5px;
+	left: 10px;
+}
+
+#task {
+	position: relative;
+	min-width: 400px;
+	position: static;
+	text-align: center;
+	/*background: rgba(0, 0, 0, 0.2);*/
+}
+
+#task div {
+	padding: 10px;
+	/*border-bottom: 1px solid gray;*/
+}
+
+a:hover {
+	color: lightgray;
+}
+
+
+@media screen and (max-width: 900px) {
+	.carousel-task {
+		flex-direction: column;
+		border-bottom: none;
+	}
+
+	.carousel {
+		border-bottom: 2px solid gray;
+	}
+
+	#task {
+		min-width: 0;
+	}
+}
