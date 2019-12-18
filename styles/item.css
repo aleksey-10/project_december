@@ -1,0 +1,83 @@
+.item {
+	display: grid;
+	grid-template-columns: 4fr 1fr 1fr;
+	grid-template-areas: 
+	"name edit delete";
+
+	max-width: 600px;
+	margin: auto;
+	padding: 10px;
+	animation-name: dropdown;
+	animation-duration: 250ms;
+	opacity: 1;
+	animation-timing-function: linear;
+}
+
+@keyframes dropdown {
+	from { margin-top: -50px; opacity: 0;} to {margin-top: 0; opacity: 1;}
+}
+
+.item div {
+	grid-area: name;
+	flex-basis: 70%;
+	padding: 10px;
+	max-width: 600px;
+	text-align: left;
+}
+
+.delete-item {
+	grid-area: delete;
+}
+
+.delete-item, .edit-button, .edit-submit {
+	flex-basis: 15%;
+	padding: 10px;
+	cursor: pointer;
+	opacity: 0.5;
+	color: inherit;
+	transition: all 500ms;
+}
+
+.delete-item:hover {
+	color: red;
+	opacity: 1;
+	transition: all 500ms;
+}
+
+.edit-button:hover {
+	opacity: 1;
+	transition: all 500ms;
+}
+
+.edit-submit:hover {
+	opacity: 1;
+	color: green;
+	transition: all 500ms;
+}
+
+.deleting-item {
+	opacity: 0;
+	transition: opacity 250ms;
+}
+
+.item-hover {
+	background-color: red;
+}
+
+.edit {
+	grid-area: edit;
+	display: flex;
+}
+
+@media screen and (max-width: 600px) {
+	/*.item {
+		
+
+		justify-content: center;
+	}*/
+
+	.item input {
+		max-width: 200px;
+	}
+
+}

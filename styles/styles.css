@@ -1,3 +1,13 @@
+body {
+	font-family: 'Muli', Tahoma, sans-serif;
+	font-size: 20px;
+	padding: 0;
+	margin: 0;
+	min-height: 100vh;
+	background: #303030;
+	color: white;
+}
+
 footer {
 	left: 0;
 	right: 0;
@@ -24,4 +34,48 @@ h1 {
 	max-height: 800px;
 	margin: auto;  
 	border:0;
+}
+
+
+input {
+	font-family: 'Muli', Tahoma, sans-serif;
+	font-size: 20px;
+	padding: 5px;
+	margin: 5px;
+}
+
+#formTask {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-areas: 
+	"text text"
+}
+
+#formTask input {
+	/*background-color: rgba(211, 211, 211, 0.5);*/
+	border:none;
+}
+
+.button-task {
+	background: lightgray;
+	cursor: pointer;
+}
+
+#submitTask:hover {
+	background: lightgreen;
+	color: white;
+}
+
+#clearTask:hover {
+	background: crimson;
+	color: white;
+}
+
+#textInput {
+	grid-area: text;
+	opacity: 1;
+}
+
+#textInput:focus {
+	
 }

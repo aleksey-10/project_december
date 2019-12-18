@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="styles/header.css"></link>
     <link rel="stylesheet" href="styles/carousel.css"></link>
     <link rel="stylesheet" href="styles/styles.css"></link>
+    <link rel="stylesheet" href="styles/item.css"></link>
 
     <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width">
@@ -46,8 +47,15 @@
 			</section>
 		
 			<section id="task">
+				<form id="formTask">
+					<input type="text" id="textInput" name="text" placeholder="Your text">
+					<input type="submit" class="button-task" id="submitTask" name="submit" value="OK">
+					<input type="button" class="button-task" id="clearTask" name="clear" value="Clear">
+				</form>
 
-				<div class="last-project">Chek my previous project <a href="https://aleksey-10.github.io/test/" target="_blank"> MyList</a></div>
+				<div id="out">
+				</div>
+				<!-- <div class="last-project">Chek my previous project <a href="https://aleksey-10.github.io/test/" target="_blank"> MyList</a></div> -->
 			</section>
 		</section>
 
@@ -72,7 +80,7 @@
 	</main>
 
 	<footer><h1>Bottom</h1></footer>
-
+	<script type="text/javascript" src="task.js"></script>
 	<script type="text/javascript" src="main.js"></script>
 </body>
 </html>
