@@ -76,7 +76,7 @@ class Str {
       $textAreaEdit.value = str.$elem.innerText;
       $editForm.parentElement.prepend($textAreaEdit);
 
-      $textAreaEdit.onchange = function () {
+      $editSubmit.onclick = $textAreaEdit.onchange = $textAreaEdit.onblur = function () {
         smbIsVisible(false);
 
         $editForm.parentElement.prepend( str.setStr($textAreaEdit.value) );

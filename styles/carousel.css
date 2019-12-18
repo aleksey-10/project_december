@@ -130,7 +130,8 @@ a:hover {
 	}
 
 	.carousel {
-		border-bottom: 2px solid gray;
+		display: none;
+		/*border-bottom: 2px solid gray;*/
 	}
 
 	#task {
