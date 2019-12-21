@@ -72,21 +72,21 @@
 
 .item input {
 	max-width: 175px;
-	animation-duration: 250ms;
+	color: gray;
 	opacity: 1;
+	animation-name: dropout;
+	animation-duration: 250ms;
+}
+
+.item input:focus {
+	color: black;
 }
 
 @keyframes dropout {
-	from { margin-top: -50px; opacity: 0;} to {margin-top: 0; opacity: 1;}
+	from { margin-left: -100px; opacity: 0;} to {margin-left: 0; opacity: 1;}
 }
 
 @media screen and (max-width: 600px) {
-	/*.item {
-		
-
-		justify-content: center;
-	}*/
-
 	.item input {
 		max-width: 150px;
 	}

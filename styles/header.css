@@ -3,6 +3,9 @@ header{
 	background: black;
 	grid-template-columns: 1fr 1fr 1fr;
 	color: white;
+	/*position: fixed;*/
+	/*width: 100%;*/
+	z-index: 1;
 	/*border-radius: 20px;*/
 	padding: 25px;
 	grid-template-areas: 
