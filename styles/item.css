@@ -1,8 +1,8 @@
 .item {
 	display: grid;
-	grid-template-columns: 4fr 1fr 1fr;
+	grid-template-columns: 5fr 1fr 1fr 1fr;
 	grid-template-areas: 
-	"name edit delete";
+	"name name edit delete";
 
 	max-width: 600px;
 	margin: auto;
@@ -19,10 +19,10 @@
 
 .item div {
 	grid-area: name;
-	flex-basis: 70%;
 	padding: 10px;
 	max-width: 600px;
 	text-align: left;
+	cursor: pointer;
 }
 
 .delete-item {
@@ -30,7 +30,6 @@
 }
 
 .delete-item, .edit-button, .edit-submit {
-	flex-basis: 15%;
 	padding: 10px;
 	cursor: pointer;
 	opacity: 0.5;
@@ -67,6 +66,7 @@
 .edit {
 	grid-area: edit;
 	display: flex;
+	justify-content: flex-end;
 }
 
 
@@ -82,11 +82,19 @@
 	color: black;
 }
 
+.clicked-item {
+	text-decoration: line-through;
+	color: lightgray;
+}
+
 @keyframes dropout {
 	from { margin-left: -100px; opacity: 0;} to {margin-left: 0; opacity: 1;}
 }
 
 @media screen and (max-width: 600px) {
+	.item {
+		animation: none;
+	}
 	.item input {
 		max-width: 150px;
 	}

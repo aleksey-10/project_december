@@ -25,27 +25,40 @@ let obj = {
 
 class Str {
   constructor(parentSelector, count) {
-    this.$parentSelector = document.querySelector(parentSelector);  
+    // this.$parentSelector = document.querySelector(parentSelector);  
+
+    this.$selector = document.createElement('div');
+
+    document.querySelector(parentSelector).append(this.$selector);
     this.count = count;  
   }
 
   print(val) {
-    let $selector = document.createElement('div');
-
-    $selector.className = 'item';
+    this.$selector.className = 'item';
     
-    $selector.append( this.setStr(val) );  
-    $selector.append( this.edit() ); 
-    $selector.append( this.setDeleteButton() );
+    this.$selector.append( this.setStr(val) );  
+    this.$selector.append( this.edit() ); 
+    this.$selector.append( this.setDeleteButton() );
 
     this.setLcl();
 
-    return this.$parentSelector.append($selector);
+    // return this.$parentSelector.append($selector);
   }
 
   setStr(val) {
     this.$elem = document.createElement('div')
     this.$elem.innerText = val;
+    let str = this;
+
+    this.$elem.onclick = function() {
+      let clicked = true;
+
+      return function() {
+        (clicked) ? str.$elem.classList.add('clicked-item') : str.$elem.classList.remove('clicked-item');
+        return clicked = !clicked;        
+      }
+    } ();
+
     return this.$elem;
   }
 
@@ -77,8 +90,9 @@ class Str {
       $textAreaEdit.type = 'text';
       $textAreaEdit.value = str.$elem.innerText;
       $editForm.parentElement.prepend($textAreaEdit);
+      
+      function setEdit () {
 
-      $editSubmit.onclick = $textAreaEdit.onchange = $textAreaEdit.onblur = function () {
         smbIsVisible(false);
 
         $editForm.parentElement.prepend( str.setStr($textAreaEdit.value) );
@@ -86,6 +100,13 @@ class Str {
 
         str.setLcl();
       }
+
+      let check = true;
+
+      $editSubmit.onclick = setEdit;
+      // $textAreaEdit.onchange = setEdit;
+      // $textAreaEdit.onblur = setEdit;
+      
     }
 
     return $editForm;
@@ -107,7 +128,11 @@ class Str {
   }
 
   setLcl() {
-    localStorage.setItem(`$element${this.count}`, this.$elem.innerText );
+    // let inner = this.$elem.innerText;
+    // let json = JSON.stringify( this.$elem.outerHTML );
+    // console.log( JSON.parse(json));
+
+    localStorage.setItem(`$element${this.count}`, this.$elem.innerText);
   }
 
   dellLcl() {
@@ -123,11 +148,6 @@ function printItem(val) {
 
   return obj.count++;
 }
-
-// let events = function () {
-//   const idAttach = '#out', idForm = '#formTask', idText = '#textInput', idClear = '#clearTask' ;
-
-// }
 
 document.querySelector(idForm).onsubmit = function () {
   printItem(document.querySelector(idText).value);

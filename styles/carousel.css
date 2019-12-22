@@ -130,12 +130,13 @@ a:hover {
 		border-bottom: none;
 	}
 
-	.carousel {
-		display: none;
-		/*border-bottom: 2px solid gray;*/
-	}
-
 	#task {
 		min-width: 0;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.carousel {
+		display: none;
 	}
 }

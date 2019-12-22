@@ -2,10 +2,7 @@
 	display: flex;
 	flex-wrap: wrap;
 	margin: auto;
-
 	font-size: 26px;
-	/*color: black;*/
-	/*font-weight: bold;*/
 }
 
 .product {
@@ -45,8 +42,12 @@
 
 
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 900px) {
 	.products {
 		justify-content: center;
+	}
+
+	.popup {
+		display: block;
 	}
 }

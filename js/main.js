@@ -140,13 +140,7 @@ document.querySelector(".fa-angle-left").onclick = () => imgs.swapByAngle(false)
 
 
 
-// task-carousel
+// window resize task/carousel height setting
 
-function resizeCarouselTask(){
-	let $task = document.querySelector('#task'), $imgAppear = document.querySelector('.appear'); 
-	$task.style.height = getComputedStyle($imgAppear).height;
-	document.body.onresize = () =>	$task.style.height = getComputedStyle($imgAppear).height;
-
-}
-
-resizeCarouselTask();
+document.body.onresize = () =>	
+	document.querySelector('#task').style.height = getComputedStyle( document.querySelector('.appear') ).height;
