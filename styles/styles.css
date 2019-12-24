@@ -7,7 +7,31 @@ body {
 	min-height: 100vh;
 	background: #303030;
 	color: white;
+	position: relative;
 }
+
+.loaded {
+	display: none;
+	animation-name: loadingContent;
+	animation-duration: 250ms;
+}
+
+@keyframes loadingContent {
+	from {opacity: 0} to {opacity: 1}
+}
+
+.loading {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	text-align: center;
+	width: 100%;
+	height: 50px;
+	margin: auto 0;
+	animation-name: 
+}
+
+
 
 footer {
 	left: 0;

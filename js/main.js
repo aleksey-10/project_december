@@ -1,3 +1,10 @@
+//
+
+window.onload = function () {
+	document.querySelector('.loading').hidden = true;	
+	document.querySelector('.loaded').style.display = 'block';
+}
+
 // header. Menu
 
 let clicked = true;

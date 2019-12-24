@@ -17,82 +17,92 @@
 </head>
 
 <body>
-	<header>
-		<div class="test-logo"><a href="">Test Logo</a></div>
-		<div class="dropdown" id="menuIcon"><i class="fas fa-align-justify"></i></div>
-		<ul class="menu" id="menuList">
-			<li><a href="#">Start</a></li>
-			<li><a href="#about">About</a></li>
-			<li><a href="#products">Products</a></li>
-			<li><a href="#contacts">Contacts</a></li>
-		</ul>
-	</header>
 
-	<main>
-		<section class="carousel-task">
-			<section id="carousel" class="carousel">
-		
-			<button class="fas fa-angle-left angles"></button>
-			<button class="fas fa-angle-right angles"></button>
+	<div class="loading">
+		<img src="img/preload.svg" allowFullScreen></img>
+	</div>
+
+
+	<div class="loaded">
+		<header>
+			<div class="test-logo"><a href="">Test Logo</a></div>
+			<div class="dropdown" id="menuIcon"><i class="fas fa-align-justify"></i></div>
+			<ul class="menu" id="menuList">
+				<li><a href="#">Start</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#products">Products</a></li>
+				<li><a href="#contacts">Contacts</a></li>
+			</ul>
+		</header>
+
+		<main>
+			<section class="carousel-task">
+				<section id="carousel" class="carousel">
 			
-			<div class="images">
-				<img src="img/wallpaper0.jpg" id="img0">
-				<img src="img/wallpaper1.jpg" id="img1">
-				<img src="img/wallpaper2.jpg" id="img2">
-				<img src="img/wallpaper3.jpg" id="img3">
-			</div>
+				<button class="fas fa-angle-left angles"></button>
+				<button class="fas fa-angle-right angles"></button>
+				
+				<div class="images">
+					<img class="carousel-img" src="img/wallpaper0.jpg" id="img0">
+					<img class="carousel-img" src="img/wallpaper1.jpg" id="img1">
+					<img class="carousel-img" src="img/wallpaper2.jpg" id="img2">
+					<img class="carousel-img" src="img/wallpaper3.jpg" id="img3">
+				</div>
+				
+				<div class="circles"></div>
+
+
+				</section>
 			
-			<div class="circles"></div>
+				<section id="task">
+					<form id="formTask">
+						<input type="text" id="textInput" name="text" placeholder="Your text" required>
+						<input type="submit" class="button-task" id="submitTask" name="submit" value="OK">
+						<input type="button" class="button-task" id="clearTask" name="clear" value="Clear">
+					</form>
 
-
+					<div id="out">
+					</div>
+					<!-- <div class="last-project">Chek my previous project <a href="https://aleksey-10.github.io/test/" target="_blank"> MyList</a></div> -->
+				</section>
 			</section>
-		
-			<section id="task">
-				<form id="formTask">
-					<input type="text" id="textInput" name="text" placeholder="Your text" required>
-					<input type="submit" class="button-task" id="submitTask" name="submit" value="OK">
-					<input type="button" class="button-task" id="clearTask" name="clear" value="Clear">
-				</form>
 
-				<div id="out">
+			<!-- <section id="about">
+				<h1>About us</h1>
+				<p>Some describing text</p>
+			</section> -->
+
+			<section id="products">
+				<h1>Products</h1>
+
+				<div class="products">
+					<div class="product">
+						<div class="product-name">My previous project</div>
+						<a href="https://aleksey-10.github.io/test/" class="popup">Show</a>
+					</div>
+					<div class="product">
+						<div class="product-name">Google</div>
+						<a href="http://google.com" class="popup">Show</a>
+					</div>
 				</div>
-				<!-- <div class="last-project">Chek my previous project <a href="https://aleksey-10.github.io/test/" target="_blank"> MyList</a></div> -->
 			</section>
-		</section>
 
-		<!-- <section id="about">
-			<h1>About us</h1>
-			<p>Some describing text</p>
-		</section> -->
-
-		<section id="products">
-			<h1>Products</h1>
-
-			<div class="products">
-				<div class="product">
-					<div class="product-name">My previous project</div>
-					<a href="https://aleksey-10.github.io/test/" class="popup">Show</a>
+			<section id="contacts">
+				<h1>Contacts</h1>
+				<div class='contact-items'>
+					<div><i class="fas fa-paper-plane"></i> <a href="https://t.me/aleksey_10" target="_blank">Aleksey</a></div>
+					<div><i class="fas fa-envelope"></i> <a href="mailto:alexcare1337@gmail.com">alexcare1337@gmail.com</a></div>
+					<div><i class="fas fa-mobile-alt"></i> <a href="phone:+380932657847">+38(093)-265-78-47</a></div>
 				</div>
-				<div class="product">
-					<div class="product-name">Google</div>
-					<a href="http://google.com" class="popup">Show</a>
-				</div>
-			</div>
-		</section>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d20326.065521301334!2d30.436714190356554!3d50.44560459199414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sua!4v1576323955462!5m2!1sru!2sua" class="google-map" frameborder="0" allowfullscreen=""></iframe>
+			</section>
 
-		<section id="contacts">
-			<h1>Contacts</h1>
-			<div class='contact-items'>
-				<div><i class="fas fa-paper-plane"></i> <a href="https://t.me/aleksey_10" target="_blank">Aleksey</a></div>
-				<div><i class="fas fa-envelope"></i> <a href="mailto:alexcare1337@gmail.com">alexcare1337@gmail.com</a></div>
-				<div><i class="fas fa-mobile-alt"></i> <a href="phone:+380932657847">+38(093)-265-78-47</a></div>
-			</div>
-			<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d20326.065521301334!2d30.436714190356554!3d50.44560459199414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sua!4v1576323955462!5m2!1sru!2sua" class="google-map" frameborder="0" allowfullscreen=""></iframe>
-		</section>
+		</main>
 
-	</main>
+		<footer><div class="test-logo">Bottom</div></footer>
+	
+	</div>
 
-	<footer><div class="test-logo">Bottom</div></footer>
 	<script type="text/javascript" src="js/task.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 	<script type="text/javascript" src="js/products.js"></script>
