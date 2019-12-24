@@ -1,4 +1,4 @@
-//
+// Page loading
 
 window.onload = function () {
 	document.querySelector('.loading').hidden = true;	

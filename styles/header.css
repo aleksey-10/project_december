@@ -95,8 +95,14 @@ a {
 		padding-bottom: 10px;
 		padding-top: 10px;
 		width: 100%;
-		
+		animation: 250ms dropdownMenu;	
 	}
+
+	@keyframes dropdownMenu {
+		from {opacity: 0; height: 0;} to {opacity: 1; height: 100px; }
+	}
+
+
 
 
 
