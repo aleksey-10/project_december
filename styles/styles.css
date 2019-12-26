@@ -1,3 +1,7 @@
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	font-family: 'Muli', Tahoma, sans-serif;
 	font-size: 20px;
@@ -8,7 +12,6 @@ body {
 	background: #303030;
 	color: white;
 	position: relative;
-	scroll-behavior: smooth;
 }
 
 .loaded {
