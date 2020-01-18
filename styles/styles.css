@@ -14,6 +14,10 @@ body {
 	position: relative;
 }
 
+main {
+	width: 100%;
+}
+
 .loaded {
 	display: none;
 	animation-name: loadingContent;
@@ -56,6 +60,17 @@ h1 {
 #about, #contacts, #products {
 	text-align: center;
 	border-bottom: 1px solid gray;
+}
+
+#about p{
+	margin: auto;
+	padding: 0 10px 0 10px;
+	text-align: justify;
+	max-width: 900px;
+}
+
+#about p:last-child {
+	margin-bottom: 20px;
 }
 
 .contact-items {
@@ -125,7 +140,6 @@ input {
 	.contact-items p {
 		margin: 0;
 		margin-bottom: 10px;
-		/*padding: 0;*/
 	}
 }
 

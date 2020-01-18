@@ -1,6 +1,5 @@
 .carousel-task {
-	border-top: 2px solid gray;
-	border-bottom: 2px solid gray;
+	border-bottom: 1px solid gray;
 	display: flex;
 	flex-direction: row-reverse;
 	justify-content: center;
@@ -56,7 +55,6 @@ button {
 }
 
 .circle:empty{
-	/*border: 2px solid lightgray;*/
 	background: gray;
 	border-radius: 50%;
 	padding: 5px;
@@ -127,7 +125,6 @@ a:hover {
 @media screen and (max-width: 900px) {
 	.carousel-task {
 		flex-direction: column;
-		border-bottom: none;
 	}
 
 	#task {

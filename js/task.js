@@ -104,9 +104,6 @@ class Str {
       let check = true;
 
       $editSubmit.onclick = setEdit;
-      // $textAreaEdit.onchange = setEdit;
-      // $textAreaEdit.onblur = setEdit;
-      
     }
 
     return $editForm;
@@ -120,9 +117,11 @@ class Str {
 
     $deleteButton.onclick = function () {
       $deleteButton.parentElement.classList.add('deleting-item');
-      setTimeout(() => $deleteButton.parentElement.remove(), 250); 
+      setTimeout(() => $deleteButton.parentElement.remove(), 250);
       str.dellLcl();
     }
+
+    this.deleteButton = $deleteButton;
 
     return $deleteButton;
   }
@@ -146,7 +145,9 @@ function printItem(val) {
   let $item = new Str(idAttach, obj.count);
   obj.$elems.push($item.print(val));
 
-  return obj.count++;
+  obj.count++;
+
+  return $item;
 }
 
 document.querySelector(idForm).onsubmit = function () {
